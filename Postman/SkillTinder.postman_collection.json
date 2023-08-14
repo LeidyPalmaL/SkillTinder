@@ -1,0 +1,867 @@
+{
+	"info": {
+		"_postman_id": "034e82aa-784d-42ed-a3ca-fc6aa0ec40d4",
+		"name": "SkillTinder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28170537"
+	},
+	"item": [
+		{
+			"name": "ConsultProfessionals",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "info@ibm.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultProfessionals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultProfessionals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultProfessionals by skill",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "info@ibm.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Identification\": \"13011696\",\r\n    \"FirstNames\": \"Álvaro\",\r\n    \"SurNames\": \"Viveros\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultProfessionals/skill/Advanced Excel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultProfessionals",
+						"skill",
+						"Advanced Excel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultProfessionals by identification",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "info@ibm.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Identification\": \"13011696\",\r\n    \"FirstNames\": \"Álvaro\",\r\n    \"SurNames\": \"Viveros\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultProfessionals/identification/1022950554",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultProfessionals",
+						"identification",
+						"1022950554"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterProfessional",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "info@ibm.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Identification\": \"13011698\",\r\n    \"FirstNames\": \"Marcelo\",\r\n    \"SurNames\": \"Pulido\",\r\n    \"Profession\": \"Marinero\",\r\n    \"PhoneNumber\": \"3164151488\",\r\n    \"Email\": \"marcdelop@gmail.com\",\r\n    \"Rate\": \"320.00\",\r\n    \"Password\": \"Mar13011\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/registerProfessional",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerProfessional"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PublishProject",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "info@ibm.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"Naturgi Support\", \r\n    \"Description\": \"Support to Naturgi\",\r\n    \"TimeBudget\": 20,\r\n    \"CostBudget\": 2600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/publishProject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"publishProject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add ProjectSkill",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "info@ibm.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"Naturgi Support\", \r\n    \"Skills\": [\r\n        \"Advanced Excel\",\r\n        \"Backend Development\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addProjectSkill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addProjectSkill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultProjects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "alvaroviverose@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultProjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultProjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultProjects by Title",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "alvaroviverose@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Identification\": \"13011696\",\r\n    \"FirstNames\": \"Álvaro\",\r\n    \"SurNames\": \"Viveros\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultProjects/title/Naturgi Support",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultProjects",
+						"title",
+						"Naturgi Support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultProjects by skill",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "alvaroviverose@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Identification\": \"13011696\",\r\n    \"FirstNames\": \"Álvaro\",\r\n    \"SurNames\": \"Viveros\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultProjects/skill/Backend Development",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultProjects",
+						"skill",
+						"Backend Development"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterCompany",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Identification\": \"13011692\",\r\n    \"FirstNames\": \"Marcelo\",\r\n    \"SurNames\": \"Pulido\",\r\n    \"Profession\": \"Marinero\",\r\n    \"PhoneNumber\": \"3164151488\",\r\n    \"Email\": \"marcdelop@gmail.com\",\r\n    \"Rate\": \"320.00\",\r\n    \"Password\": \"Mar13011\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/registerCompany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContactProfessional",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "info@ibm.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"Naturgi Support\", \r\n    \"Description\": \"Support to Naturgi\",\r\n    \"TimeBudget\": 20,\r\n    \"CostBudget\": 2600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contactProfessional",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contactProfessional"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultProfessionalNegotiations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "alvaroviverose@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultProfessionalNegotiations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultProfessionalNegotiations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultProfessionalNegotiations by companyName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "alvaroviverose@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultProfessionalNegotiations/company/Ibm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultProfessionalNegotiations",
+						"company",
+						"Ibm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultProfessionalNegotiations by project",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "alvaroviverose@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultProfessionalNegotiations/project/Naturgi Support",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultProfessionalNegotiations",
+						"project",
+						"Naturgi Support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultCompanyNegotiations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "info@ibm.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultCompanyNegotiations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultCompanyNegotiations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultCompanyNegotiations by identification",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "info@ibm.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultCompanyNegotiations/identification/13011696",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultCompanyNegotiations",
+						"identification",
+						"13011696"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultCompanyNegotiations by project",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "info@ibm.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultCompanyNegotiations/project/Naturgi Support",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultCompanyNegotiations",
+						"project",
+						"Naturgi Support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContactCompany",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "alvaroviverose@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Ibm\",\r\n    \"Title\": \"Naturgi Support\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contactCompany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contactCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendProposal",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "alvaroviverose@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mar13011",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Ibm\",\r\n    \"Title\": \"Naturgi Support\",\r\n    \"Duration\": \"20:00:00\",\r\n    \"Cost\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sendProposals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sendProposals"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
