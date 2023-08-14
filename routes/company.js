@@ -336,7 +336,7 @@ router.post('/contactProfessional', companyAuth, async (req, res) => {
 
 router.get('/acceptProposals', (req, res) => {
     res.send('Accepting Proposals');
-    //Solo cambiar estado
+    //Solo cambiar estado en Netotiations
 });
 
 router.get('/Deposit Payments', (req, res) => {
