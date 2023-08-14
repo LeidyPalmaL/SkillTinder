@@ -1,0 +1,29 @@
+@startuml
+  Entity Proffesional {
+    Identification
+    Names
+  }
+  Entity Skill {
+    Id
+    Description
+  }
+  Entity Company {
+    Identification
+    Name
+  }
+  Entity Project {
+    Id
+    Description
+  }
+  Entity Payment {
+    Id
+    Details
+  }
+
+  Company ||--o{ Project : A Company has many Projects
+  Payment }|--||Project : A Project has many Payments
+  Proffesional ||--o{ Project : A Project is taken over by a Proffesional
+  Proffesional }o--o{ Company : A Proffesional negotiates with many Companies \nbut one Company negotiates with many Proffesionals
+  Proffesional }o--o{ Skill : A Proffesional has many Skills \nbut oneja Skill belongs to many Proffesionals
+  Project }o--o{ Skill : A Project requires many skills \nbut one Skill is required by many projects.
+@enduml

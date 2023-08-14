@@ -1,0 +1,82 @@
+@startuml
+  Entity Professional {
+    Id: int <<PK>>
+    --
+    Identification: string <<Unique>>
+    FirstNames: string
+    SurNames: string
+    Proffesion: string
+    PhoneNumber: string
+    Email: string
+    Rate: decimal(5,2)
+    Password: string
+  }
+  Entity ProfessionalSkill {
+    Professional: int <<FK: Professional(Id)>> <<PK>>
+    Skill: int <<FK: Skill(Id)>> <<PK>>
+  }
+  Entity Skill {
+    Id: int <<PK>>
+    --
+    Description: string
+  }
+  Entity Negotiation {
+    Professional: int <<FK: Professional(Id)>> <<PK>>
+    Company: int <<FK: Company(Id)>> <<PK>>
+    Project: int <<FK: Project(Id)>> <<PK>>
+    --
+    Date: date
+    Duration: time
+    Cost: decimal(15,2)
+  }
+  Entity Company {
+    Id: int <<PK>>
+    --
+    Identification: string <<Unique>>
+    Name: string
+    PhoneNumber: string
+    Email: string
+    Password: string
+  }
+  Entity Project {
+    Id: int <<PK>>
+    --
+    Title: string
+    Description: text
+    TimeBudget: int
+    CostBudget: decimal(12,2)
+    --
+    Company: int <<FK: Company(id)>>
+    Professional: int <<FK: Professional(id)>>
+  }
+  Entity ProjectSkill {
+    Project: int <<FK: Project(id)>> <<PK>>
+    Skill: int <<FK: Skill(id)>> <<PK>>
+  }
+  Entity Payment {
+    Id: int <<PK>>
+    --
+    Number: int <<Unique>>
+    Date: datetime
+    Value: decimal(12,2)
+    --
+    Project: int <<FK: Project(id)>>
+    PaymentType: int <<FK: PaymentType(id)>>
+  }
+  Entity PaymentType {
+    Id: int <<PK>>
+    --
+    Description: string
+  }
+
+  Professional ||--o{ ProfessionalSkill
+  ProfessionalSkill }o--|| Skill
+  Professional ||--o{ Negotiation
+  Negotiation }o--||Company
+  Company ||--o{ Project
+  Payment }|--||Project
+  Payment }o--|| PaymentType
+  Professional ||--o{ Project
+  Project ||--o{ ProjectSkill
+  ProjectSkill }o--|| Skill
+@enduml

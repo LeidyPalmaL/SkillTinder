@@ -1,0 +1,36 @@
+@startuml
+    left to right direction
+    skinparam actorStyle awesome
+
+    Actor Professional As Pr
+    :Pr: --> (Registers)
+    :Pr: --> (Consults Projects)
+    (Consults Projects) ..> (Contacts Companies)
+    :Pr: --> (Sends Proposals)
+    :Pr: --> (Consult Negotiations)
+    :Pr: --> (Consults Payments)
+
+    (Consults Projects) <-- (Authenticates)
+    (Contacts Companies) <-- (Authenticates)
+    (Sends Proposals) <-- (Authenticates)
+    (Accepts Projects) <-- (Authenticates)
+    (Consults Payments) <-- (Authenticates)
+
+    Actor Companies As Cm
+    :Cm: --> (Registers)
+    :Cm: --> (Consults Professionals)
+    (Consults Professionals) ..> (Contacts Professional)
+    :Cm: --> (Publishes Projects)
+    :Cm: --> (Consult Negotiations)
+    :Cm: --> (Accepts Proposals)
+    :Cm: --> (Deposits Payments)
+    (Deposits Payments) ..> (Deposits Advance Payment)
+
+    (Consults Professionals) <-- (Authenticates)
+    (Contacts Professional) <-- (Authenticates)
+    (Publishes Projects) <-- (Authenticates)
+    (Accepts Proposals) <-- (Authenticates)
+    (Deposits Payments) <-- (Authenticates)
+    (Deposits Advance Payment) <-- (Authenticates)
+
+@enduml
