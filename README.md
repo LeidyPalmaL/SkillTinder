@@ -7,7 +7,8 @@ También es posible crear una Aplicación de Usuario que consuma estas API y pre
 
 Un ejemplo de uso de nuestra API es el siguiente, usando JS.
 
-----------------------------
+---
+```
 var myHeaders = new Headers();
 myHeaders.append("Authorization", "Basic aW5mb0BpYm0uY29tOk1hcjEzMDEx");
 
@@ -24,7 +25,9 @@ fetch("http://localhost:3000/consultProfessionals/skill/Advanced Excel", request
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
-----------------
+
+```
+---
 
 Este código consume el API consultProfessionals by Skill
 Como parámetro de la petición se envía la habilidad (skill) que se desea buscar entre los profesionales.
